@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPE Tokenizer - Online Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 BPE Tokenizer</h1>
+            <p>Byte Pair Encoding Tokenizer - Encode and Decode Text Instantly</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <h2>📝 Input Text</h2>
+                <textarea id="inputText" placeholder="Enter your text here to encode..." rows="6">hello this is a test of the tokenizer</textarea>
+                
+                <div class="button-group">
+                    <button id="encodeBtn" class="btn btn-primary">🔒 Encode Text</button>
+                    <button id="decodeBtn" class="btn btn-secondary">🔓 Decode Tokens</button>
+                    <button id="clearBtn" class="btn btn-clear">🗑️ Clear</button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <div class="result-box">
+                    <h3>🔢 Encoded Tokens</h3>
+                    <div id="encodedResult" class="result-content">
+                        <span class="placeholder">Encoded tokens will appear here...</span>
+                    </div>
+                    <div class="stats">
+                        <span id="tokenCount">Token count: 0</span>
+                        <span id="compressionRatio">Compression: 0%</span>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h3>📄 Decoded Text</h3>
+                    <div id="decodedResult" class="result-content">
+                        <span class="placeholder">Decoded text will appear here...</span>
+                    </div>
+                    <div class="stats">
+                        <span id="accuracy">Perfect reconstruction: ✓</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vocabulary Info -->
+            <div class="vocab-section">
+                <h2>📚 Vocabulary Information</h2>
+                <div class="vocab-stats">
+                    <div class="stat-card">
+                        <h4>Total Tokens</h4>
+                        <span id="totalVocab">Loading...</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>ASCII Tokens</h4>
+                        <span>256 (0-255)</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Merged Tokens</h4>
+                        <span id="mergedCount">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Examples Section -->
+            <div class="examples-section">
+                <h2>💡 Try These Examples</h2>
+                <div class="examples-grid">
+                    <button class="example-btn" data-text="Hello world! How are you today?">Simple greeting</button>
+                    <button class="example-btn" data-text="The quick brown fox jumps over the lazy dog">Classic pangram</button>
+                    <button class="example-btn" data-text="Python programming is fun and powerful">Programming text</button>
+                    <button class="example-btn" data-text="Machine learning and artificial intelligence">Tech terms</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with JavaScript • BPE Algorithm • No server required</p>
+            <p><a href="https://github.com/Blitzo125/Tokenizer-webpage" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="tokenizer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
